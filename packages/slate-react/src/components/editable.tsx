@@ -1093,20 +1093,20 @@ export const Editable = (props: EditableProps) => {
                       Editor.deleteFragment(editor)
                       return
                     }
-                    const inline = Editor.above(editor, {
-                      match: n => Editor.isInline(editor, n),
-                      mode: 'highest',
-                    })
-                    if (inline) {
-                      const [, inlinePath] = inline
-                      if (Editor.isEnd(editor, selection.anchor, inlinePath)) {
-                        const point = Editor.after(editor, inlinePath)!
-                        Transforms.setSelection(editor, {
-                          anchor: point,
-                          focus: point,
-                        })
-                      }
-                    }
+                    // const inline = Editor.above(editor, {
+                    //   match: n => Editor.isInline(editor, n),
+                    //   mode: 'highest',
+                    // })
+                    // if (inline) {
+                    //   const [, inlinePath] = inline
+                    //   if (Editor.isEnd(editor, selection.anchor, inlinePath)) {
+                    //     const point = Editor.after(editor, inlinePath)!
+                    //     Transforms.setSelection(editor, {
+                    //       anchor: point,
+                    //       focus: point,
+                    //     })
+                    //   }
+                    // }
                   }
                 }
               },
